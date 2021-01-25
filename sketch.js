@@ -48,7 +48,7 @@ function draw() {
     if(surface3.isTouching(box) && box.bounceOff(surface3))
         music.stop();  
         box.velocityY=0;
-        box.shapeColor="red"
+        box.shapeColor="red";
     }
 
     if(surface4.isTouching(box) && box.bounceOff(surface4))
