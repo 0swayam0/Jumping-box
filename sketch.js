@@ -1,4 +1,4 @@
-var box,surface1,surface2,surface3,surface4,topEdge;
+var Box,surface1,surface2,surface3,surface4,topEdge;
 
 var music;
 
