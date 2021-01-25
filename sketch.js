@@ -37,26 +37,22 @@ function draw() {
 
     box.bounceOff(topEdge);
     
-    if(surface1.isTouching(box) && box.bounceOff(surface1)){
-        surface1.shapeColor="red";
-        box.shapeColor="red";
+    if(surface1.isTouching(box) && box.bounceOff(surface1))
+        box.shapeColor="orange";
     }
 
-    if(surface2.isTouching(box) && box.bounceOff(surface2)){
-        surface2.shapeColor="cyan";
-        box.shapeColor="cyan";
+    if(surface2.isTouching(box) && box.bounceOff(surface2))
+        box.shapeColor="violet";
     }
 
-    if(surface3.isTouching(box) && box.bounceOff(surface3)){
-        surface3.shapeColor="orange";
+    if(surface3.isTouching(box) && box.bounceOff(surface3))
         music.stop();  
         box.velocityY=0;
-        box.shapeColor="orange"
+        box.shapeColor="red"
     }
 
-    if(surface4.isTouching(box) && box.bounceOff(surface4)){
-        surface4.shapeColor="violet";
-        box.shapeColor="violet";
+    if(surface4.isTouching(box) && box.bounceOff(surface4))
+        box.shapeColor="cyan";
         music.play();
     }
 
