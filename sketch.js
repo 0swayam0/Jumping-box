@@ -9,12 +9,11 @@ function preload(){
 
 function setup(){
  createCanvas(700,500);
- createEdgeSprites();
 
- box=createSprite(400,200,30,30);
- box.shapeColor="white";
- box.velocityY=5;
- box.x=random(20,650); 
+ Box=createSprite(400,200,30,30);
+ Box.shapeColor="white";
+ Box.velocityY=5;
+ Box.x=random(20,650); 
 
  surface1=createSprite(80,490,150,15);
  surface1.shapeColor="orange";
@@ -35,24 +34,24 @@ function setup(){
 function draw() {
     background(0);
 
-    box.bounceOff(topEdge);
+    Box.bounceOff(topEdge);
     
-    if(surface1.isTouching(box) && box.bounceOff(surface1))
-        box.shapeColor="orange";
+    if(surface1.isTouching(Box) && Box.bounceOff(surface1)){
+        Box.shapeColor="orange";
     }
 
-    if(surface2.isTouching(box) && box.bounceOff(surface2))
-        box.shapeColor="violet";
+    if(surface2.isTouching(Box) && Box.bounceOff(surface2)){
+        Box.shapeColor="violet"
     }
 
-    if(surface3.isTouching(box) && box.bounceOff(surface3))
+    if(surface3.isTouching(Box) && Box.bounceOff(surface3)){
         music.stop();  
-        box.velocityY=0;
-        box.shapeColor="red";
+        Box.velocityY=0;
+        Box.shapeColor="red";
     }
 
-    if(surface4.isTouching(box) && box.bounceOff(surface4))
-        box.shapeColor="cyan";
+    if(surface4.isTouching(Box) && Box.bounceOff(surface4)){
+        Box.shapeColor="cyan";
         music.play();
     }
 
